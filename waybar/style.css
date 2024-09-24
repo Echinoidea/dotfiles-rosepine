@@ -1,0 +1,165 @@
+/*:root {*/
+/*  --base: #191724;*/
+/*  --surface: #1f1d2e;*/
+/*  --overlay: #26233a;*/
+/**/
+/*  --muted: #6e6a86;*/
+/*  --subtle: #908caa;*/
+/*  --text: #e0def4;*/
+/**/
+/*  --love: #eb6f92;*/
+/*  --gold: #f6c177;*/
+/*  --rose: #ebbcba;*/
+/*  --pine: #31748f;*/
+/*  --foam: #9ccfd8;*/
+/*  --iris: #c4a7e7;*/
+/**/
+/*  --highlightLow: #21202e;*/
+/*  --highlightMed: #403d52;*/
+/*  --highlightHigh: #524f67;*/
+/*}*/
+
+/*If you are reading this, im sorry this is so ugly but its for me*/
+
+@import "./rose-pine.css";
+
+
+* {
+  font-family:
+    Hack Nerd Font;
+  font-size: 13px;
+  color: #e0def4;
+}
+
+/* main waybar */
+window#waybar {
+  /*background: rgba(25, 23, 36, 0);*/
+  background: transparent;
+}
+
+/* when hovering over modules */
+tooltip {
+  background: #403d52;
+  border-radius: 5%;
+}
+
+.modules-right {
+  /*padding-right: 14px;*/
+  padding-left: 6px;
+  border-left: 2px solid rgba(234, 154, 151, 0.6);
+  /*border-top-left-radius: 25px;*/
+  /*border-bottom-left-radius: 25px;*/
+  border-top-left-radius: 0em;
+  border-bottom-left-radius: 7em;
+  /*border-top-left-radius: 50% 20%;*/
+  /*border-bottom-left-radius: 50% 20%;*/
+  background-color: rgba(234, 154, 151, 0.2);
+}
+
+
+.modules-left {
+  border-color: #ffffff;
+  border-width: 1px;
+  border-right: 2px solid rgba(234, 154, 151, 0.6);
+  border-top-right-radius: 0em;
+  border-bottom-right-radius: 7em;
+  background-color: rgba(234, 154, 151, 0.2);
+}
+
+.modules-center {
+  padding-left: 4px;
+  padding-right: 4px;
+
+  /*border-left: 2px solid rgba(234, 154, 151, 1);*/
+  /*border-top-left-radius: 0em;*/
+  /*border-bottom-left-radius: 8em;*/
+  /**/
+  /*border-right: 2px solid rgba(234, 154, 151, 1);*/
+  /*border-top-right-radius: 0em;*/
+  /*border-bottom-right-radius: 8em;*/
+  /*background-color: rgba(234, 154, 151, 0.4);*/
+}
+
+/* Sets active workspace to have a solid line on the bottom */
+#workspaces button.active {
+  border-bottom: 1px solid #ebbcba;
+  border-radius: 0;
+  margin-top: 0px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* More workspace stuff for highlighting on hover */
+#workspaces button.focused {
+  color: #a6adc8;
+}
+
+#workspaces button.urgent {
+  color: #f7768e;
+}
+
+#workspaces button:hover {
+  background: #11111b;
+  color: #cdd6f4;
+}
+
+
+/* Sets background, padding, margins, and borders for (all) modules */
+#workspaces,
+#network,
+#cpu,
+#memory,
+#pulseaudio,
+#battery,
+#clock {
+  background: rgba(26, 27, 38, 0.0);
+  padding: 0 8;
+}
+
+#temperature {
+  padding: 0;
+  padding-left: 8px;
+}
+
+#pulseaudio {
+  padding-bottom: 1px;
+  padding-right: 6px;
+
+}
+
+#clock {
+  margin-left: 10px;
+  padding-left: 16px;
+  border-left: 2px solid rgba(246, 193, 119, 0.6);
+  background-color: rgba(246, 193, 119, 0.2);
+  border-top-left-radius: 0em;
+  border-bottom-left-radius: 7em;
+}
+
+
+#custom-notification {
+  padding: 4px;
+}
+
+#custom-logout {
+  padding-left: 8px;
+  padding-right: 20px;
+  font-size: 16px;
+  border-right: 2px solid rgba(246, 193, 119, 0.6);
+  background-color: rgba(246, 193, 119, 0.2);
+  border-top-right-radius: 0em;
+  border-bottom-right-radius: 7em;
+}
+
+#workspaces {
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 19px;
+}
+
+
+/* Hide window module when not focused on window or empty workspace */
+window#waybar.empty #window {
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+}
