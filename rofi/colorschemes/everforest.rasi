@@ -1,10 +1,11 @@
 * {
-  background: #191724;
-  background-alt: #232136;
-  foreground: #555f66;
-  active: #ebbcba;
-  selected: #6e6a86;
+  background: rgba(25, 23, 36, 0.7);
+  background-alt: rgba(31, 29, 46, 0.0);
+  foreground: #e0def4;
+  active: rgba(25, 23, 36, 0.0);
+  selected: rgba(25, 23, 36, 0.7);
   selected-text: #e0def4;
+
 }
 
 /* vim:ft=css

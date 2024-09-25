@@ -118,21 +118,40 @@ tooltip {
 #temperature {
   padding: 0;
   padding-left: 8px;
+  padding-right: 0px;
+}
+
+#temperature.critical {
+  color: #eb6f92;
 }
 
 #pulseaudio {
   padding-bottom: 1px;
-  padding-right: 6px;
+  padding-left: 8px;
+  padding-right: 9px;
 
 }
 
 #clock {
-  margin-left: 10px;
+  margin-left: 2px;
   padding-left: 16px;
   border-left: 2px solid rgba(246, 193, 119, 0.6);
   background-color: rgba(246, 193, 119, 0.2);
   border-top-left-radius: 0em;
   border-bottom-left-radius: 7em;
+}
+
+#battery {
+  font-size: 16px;
+
+}
+
+#battery.warning {
+  color: #f6c177;
+}
+
+#battery.critical {
+  color: #eb6f92;
 }
 
 
